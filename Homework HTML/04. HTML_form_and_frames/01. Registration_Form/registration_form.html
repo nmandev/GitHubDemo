@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Registration form</title>
+	<style>
+		table,
+		tr,
+		td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			width: 30%
+		}
+		
+		th {
+			text-align: right;
+		}
+		
+		tfoot {
+			background-color: lightblue;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<form name="form" method="POST" action="#">
+		<table>
+			<tfoot>
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="Изпращане" required="required">
+						<input type="reset" value="Нулиране" required="required">
+					</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<th>
+						<label for="last_name">Фамилия</label>
+					</th>
+					<td>
+						<input type="text" id="last_name" placeholder="Наков" required="required">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="first_name">Име</label>
+					</th>
+					<td>
+						<input type="text" id="first_name" placeholder="Светлин" required="required">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="address">Адрес</label>
+					</th>
+					<td>
+						<textarea id="address" placeholder="ул. Христо Ботев, ет. 3, ап. 2" required="required"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="city">Град</label>
+					</th>
+					<td>
+						<input type="text" id="city" placeholder="София" required="required" maxlength="" size="11">
+						<label for="state">Щат</label>
+						<input type="text" id="state" required="required" maxlength="4" size="3">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="p_code">Пощенски код</label>
+					</th>
+					<td>
+						<input type="text" id="p_code" placeholder="1700" required="required">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="country">Държава</label>
+					</th>
+					<td>
+						<select id="country">
+                        <option value="first" selected="selected">България</option>
+                        <option value="second">Испания</option>
+                        <option value="third">Франия</option>
+                    </select>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="phone">Телефон(код на държавата, оператор, номер)</label>
+					</th>
+					<td>
+						(+<input type="tel" id="phone" placeholder="359" required="required" maxlength="3" size="1">)
+						<input type="tel" placeholder="887" required="required" maxlength="3" size="2"> -
+						<input type="tel" placeholder="749137" required="required" maxlength="6" size="5">
+					</td>
+				</tr>
+				<tr>
+					<th><label for="email">Електронна поща</label></th>
+					<td>
+						<input type="email" id="email" placeholder="something@gmail.com" required="required">
+					</td>
+				</tr>
+				<tr>
+					<th><label for="birthDay">Рожден ден</label></th>
+					<td>
+						<label for="birthDay">м.</label>
+						<input type="number" id="birthDay" placeholder="06" required="required" min="1" max="12" style="width: 30px">
+						<label for="day">д.</label>
+						<input type="number" id="day" placeholder="14" required="required" min="1" max="31" style="width: 30px">
+						<label for="year">г.</label>
+						<input type="number" id="year" placeholder="1980" required="required" min="1900" max="2222" style="width: 50px">
+					</td>
+				</tr>
+				<tr>
+					<th><label for="gender">Пол</label></th>
+					<td>
+						<select id="gender">
+                        <option value="female" selected="selected">Жена</option>
+                        <option value="male">Мъж</option>
+                    </select>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="startingDate">Начална дата</label></th>
+					<td>
+						<input type="radio" name="start" value="Fall 2006">Есен 2016
+						<input type="radio" name="start" value="Summer 2006">Лято 2016
+					</td>
+				</tr>
+				<tr>
+					<th><label for="comments">Коментари/Въпроси</label></th>
+					<td>
+						<textarea id="comments" placeholder="Моля, изпрати ми повече информация за регистацията"></textarea>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
+
+</html>
